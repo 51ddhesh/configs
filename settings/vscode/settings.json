@@ -1,0 +1,87 @@
+{
+    "python.terminal.activateEnvironment": false,
+
+    "[go]": {
+        "editor.formatOnSave": true,  // ✅ Keep formatting on save
+        "editor.codeActionsOnSave": {
+            "source.organizeImports": "never"  // ❌ Don't auto-remove imports
+        }
+    },
+    "go.formatOnSave": true,
+    "gopls": {
+        "analyses": {
+            "unusedparams": false,  // ❌ Don't flag unused function parameters
+            "unusedvariable": false,  // ❌ Don't flag unused variables (optional)
+            "unusedwrite": false     // ❌ Don't flag unused writes
+        }
+    },
+
+    // VSCode Vim settings
+    "vim.useSystemClipboard": true,  // ✅ Enable system clipboard support (copy/paste across apps)
+    "vim.insertModeKeyBindings": [
+        {
+            "before": ["<C-j>"],
+            "after": ["<Esc>"]
+        },
+        {
+            "before": ["<C-k>"],
+            "after": ["<Esc>"]
+        }
+    ],  // Customize keybindings for insert mode
+    "vim.normalModeKeyBindings": [
+        {
+            "before": ["<C-w>", "f"],
+            "after": ["<Cmd>workbench.action.files.reopenActiveFile<CR>"]
+        },
+        {
+            "before": ["<C-w>", "d"],
+            "after": ["<Cmd>workbench.action.files.delete<CR>"]
+        },
+        {
+            "before": ["<C-w>", "t"],
+            "after": ["<Cmd>workbench.action.terminal.new<CR>"]
+        }
+    ],  // Keybindings for reopening, deleting files, and opening a terminal in normal mode
+    "vim.easymotion": true,  // Enable EasyMotion for faster navigation
+
+    // CodeLLDB settings (for debugging)
+    "codeLLDB.activeTerminal": "integrated",  // Use VSCode's integrated terminal for LLDB
+    "codeLLDB.integratedTerminalBackground": true,  // Keep background processes running in the integrated terminal
+    "codeLLDB.stopOnEntry": true,  // Stop on entry for debugging, great for quick inspections
+    "codeLLDB.logToFile": true,  // Enable logging to a file for debugging
+
+    // Debugging settings for better experience
+    "debug.console.fontSize": 14,  // Slightly larger font for readability in the debug console
+    "debug.console.scrollback": 2000,  // Increase the amount of output in the debug console
+    "debug.openDebug": "openOnSessionStart",  // Automatically open Debug panel when debugging starts
+    "debug.showInStatusBar": true,  // Show debugging status in the status bar
+    "editor.minimap.enabled": false,  // Disable minimap if you prefer a cleaner view (optional)
+
+    // Editor settings for productivity
+    "editor.tabSize": 4,  // Set the tab size to 4 spaces (can be customized per project)
+    "editor.insertSpaces": true,  // Always insert spaces when hitting Tab (no hard tabs)
+    "editor.renderWhitespace": "boundary",  // Show whitespace only at the boundary
+    "editor.renderControlCharacters": true,  // Show control characters in the editor (optional, useful for debugging issues)
+    
+    // Enable file auto-save (optional, depending on your preference)
+    "files.autoSave": "afterDelay",  // Auto-save after a short delay
+    "files.autoSaveDelay": 1000,  // Auto-save delay of 1 second
+
+    // Rust-specific settings for rust-analyzer
+    "[rust]": {
+        "editor.formatOnSave": true,  // ✅ Auto-format Rust files on save
+        "editor.codeActionsOnSave": {
+            "source.organizeImports": true  // ✅ Automatically organize imports on save
+        }
+    },
+    "rust-analyzer.checkOnSave.enable": true,  // ✅ Enable checking on save
+    "rust-analyzer.cargo.loadOutDirsFromCheck": true,  // ✅ Include out directories in the project
+    "rust-analyzer.cargo.target": "x86_64-unknown-linux-gnu",  // Optional: Set target architecture for cargo
+    "rust-analyzer.procMacro.enable": true,  // ✅ Enable procedural macros for better IntelliSense
+
+    // Misc Rust tooling
+    "rust-analyzer.inlayHints.enable": true,  // ✅ Show inlay hints for types, variables, etc.
+    "rust-analyzer.assist.importMergeBehavior": "last",  // Merge imports by putting the last one at the bottom
+    "rust-analyzer.diagnostics.enable": true,  // ✅ Enable Rust diagnostics
+    "rust-analyzer.updates.channel": "stable"  // Use stable updates for rust-analyzer (can change to nightly if preferred)
+}
