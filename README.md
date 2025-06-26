@@ -1,4 +1,4 @@
-# Configuration, Scripts and Settings
+# Configurations, Scripts and Settings
 
 
 - [scripts](/scripts/) contain the scripts used for competitive programming contests and practice.
