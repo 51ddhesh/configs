@@ -1,3 +1,3 @@
 # Configs 
 
-List of configs I use daily
+List of configs I use.
