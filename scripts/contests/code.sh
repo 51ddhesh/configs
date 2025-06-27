@@ -1,5 +1,4 @@
 #!/bin/bash
-
 file="$1"
 mkdir -p "$file"
 cd "$file"
